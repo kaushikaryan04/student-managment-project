@@ -1,0 +1,36 @@
+{% extends "main/base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    {%block content %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            margin:auto;
+            padding-top: 60px;
+                display: flex;
+                flex-direction: column;
+                width: 500px;
+                height:500px;
+                /* justify-content: center; */
+        }
+    </style>
+
+</head>
+<body>
+    <div class = "forForm">
+    <form method = "POST" action = "addstudent">
+        {% csrf_token %}
+        {{form }}
+        <button type = "submit">submit</button>
+
+
+    </form>
+</div>
+
+    {%endblock%}
+</body>
+</html>

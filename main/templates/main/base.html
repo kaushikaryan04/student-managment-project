@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .navbaar{
+            display:"flex";
+
+        }
+    </style>
+</head>
+<body>
+
+    <navbaar class = "navbaar">
+        student management system
+        {% if user.is_authenticated %}
+        <p>loged in as {{user}}</p>
+        <button><a href="handleLogout" > logout</a></button>
+        {%else%}
+        <button type = "link"> <a href="/login">Login here</a></button>
+        <button type = "link"> <a href="/register" > register</a> </button>
+        
+        {%endif%}
+        
+    </navbaar>
+    {% block content %}
+    {% endblock content %}    
+</body>
+</html>
