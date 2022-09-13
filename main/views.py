@@ -71,7 +71,7 @@ def handleLogout(request):
 @login_required(login_url="login")
 def addStudent(request):
 	if request.method == 'POST':
-		print(requst.POST)
+
 		form = AddStudent(request.POST)
 		if form.is_valid():
 			form.save()

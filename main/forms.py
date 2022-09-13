@@ -6,7 +6,7 @@ from django.contrib.admin import widgets
 
 class DateInput(forms.DateInput):
      input_type = 'date'
-     
+
 
 
 class AddStudent(ModelForm):

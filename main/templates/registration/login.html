@@ -14,7 +14,7 @@
 <body>
 	<div >
 		{% block content %}
-{% if user.is_authenticated %}
+		{% if user.is_authenticated %}
 
 			<h1>You are already loged in as {{user}} log out first</h1>
 			{%else%}
